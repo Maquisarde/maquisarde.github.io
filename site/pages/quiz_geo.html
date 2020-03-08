@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/quiz_style.css">
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two:700|Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da31e9a615.js" crossorigin="anonymous"></script>
+
+
+    <title>QuizBee</title>
+
+
+</head>
+
+<body>
+
+<!-- NAVBAR SECTION -->
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="navbar-header"> -->
+        <a class="navbar-brand" href="../pages/index.html"><i class="fas fa-dice-d6"></i> QuizBee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="font-weight: 700;">
+                    <a class="nav-link" href="../pages/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/quiz.html">Quizzes</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../pages/themes.html" id="navbardrop"
+                        data-toggle="dropdown">Themes</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../pages/quiz_trivia.html">Trivia</a>
+                        <a class="dropdown-item" href="../pages/quiz_cinema.html">Cinema</a>
+                        <a class="dropdown-item" href="../pages/quiz_geo.html">Geography</a>
+                    </div>
+                </li>
+                <!-- End of Dropdown -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/rules.html">Rules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END OF NAVBAR SECTION -->
+
+<!-- JUMBOTRON SECTION -->
+<div class="container-fluid quiz-trivia">
+    <h1 class="display-4" style="padding: 1rem;">Geography Quiz</h1>
+    <h3>How well do you know your geography? Take this quiz and find out! <i class="far fa-grin"></i></h3>
+</div>
+<!-- END OF JUMBOTRON SECTION -->
+
+
+ <!-- TEST QUIZ SECTION -->
+ <div class="container-fluid quizbox" id="containerQuiz">
+     <div class="btn" id="start">Start the Quiz!</div>
+     <div id="quiz" style="display: none">
+         <div id="question"></div>
+         <div id="choices">
+             <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+             <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+             <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+             <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+         </div>
+         <div id="timer">
+             <div id="counter"></div>
+             <div id="btimeGauge"></div>
+             <div id="timeGauge"></div>
+         </div>
+         <div id="progress"></div>
+     </div>
+     <div id="scoreContainer" style="display: none"></div>
+ </div>
+
+ <!-- END OF TEST QUIZ SECTION -->
+
+
+<!-- FOOTER SECTION -->
+<footer class="footer mt-auto py-3">
+    <div class="footer-icon text-center">
+        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+    <div class="container text-center">
+        <span class="footer-text">Copyright ©2019 All rights reserved | This template is made with <i
+                class="far fa-heart"></i> by me.</span>
+    </div>
+</footer>
+<!-- END OF FOOTER SECTION -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="C:\Users\Laura\Documents\front_end_dev_course\my_coding_project\site\scripts\quiz_geo.js"></script>
+</body>
+
+</html>
